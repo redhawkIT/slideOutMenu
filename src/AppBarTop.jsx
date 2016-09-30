@@ -9,20 +9,21 @@ import DrawerLeft from './DrawerLeft'
 class AppBarTop extends Component {
   constructor(props) {
     super(props)
-    this.toggleDrawer = this.toggleDrawer.bind(this)
+    this.handleToggle = this.handleToggle.bind(this)
+    this.handleClose = this.handleClose.bind(this)
     this.state = {open: false}
   }
 
-  toggleDrawer() {
-    this.setState({open: !this.state.open})
-  }
+  handleToggle = () => this.setState({open: !this.state.open})
+  handleClose = () => this.setState({open: false})
 
   render() {
+    console.log(this.state.open)
     return (
       <div>
         <AppBar
           title="Title"
-          onLeftIconButtonTouchTap={this.toggleDrawer}
+          onLeftIconButtonTouchTap={this.handleToggle}
 
           iconElementRight={
             <IconMenu
@@ -38,7 +39,11 @@ class AppBarTop extends Component {
             </IconMenu>
           }
         />
-        <DrawerLeft open={this.state.open} onToggleDrawer={this.toggleDrawer} />
+        <DrawerLeft
+          open={this.state.open}
+          close={this.handleClose}
+          onToggleDrawer={this.handleToggle}
+        />
       </div>
     )
   }
