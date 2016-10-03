@@ -34,7 +34,7 @@ class AppBarTop extends Component {
             >
               <MenuItem primaryText="Refresh" />
               <MenuItem primaryText="Help" />
-              <MenuItem primaryText="Sign out" />
+              <MenuItem primaryText="Sign out" onClick={() => this.props.logout()}/>
             </IconMenu>
           }
         />
