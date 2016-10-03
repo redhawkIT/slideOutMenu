@@ -2,18 +2,6 @@ import React, {Component} from 'react'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 
-const style = {
-  marginRight: 0
-}
-
-const ButtonClose = () => (
-  <div>
-    <FloatingActionButton mini={true} style={style}>
-      X
-    </FloatingActionButton>
-  </div>
-)
-
 export default class DrawerLeft extends Component {
   render() {
     return (
