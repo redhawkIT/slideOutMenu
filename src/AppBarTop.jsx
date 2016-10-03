@@ -18,7 +18,6 @@ class AppBarTop extends Component {
   handleClose = () => this.setState({open: false})
 
   render() {
-    console.log(this.state.open)
     return (
       <div>
         <AppBar

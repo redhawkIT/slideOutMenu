@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBarTop from './AppBarTop'
+import Login from './Login'
 import './App.css'
 
 class App extends Component {
@@ -9,6 +10,7 @@ class App extends Component {
       <MuiThemeProvider>
         <div>
           <AppBarTop/>
+          <Login/>
         </div>
       </MuiThemeProvider>
     )
