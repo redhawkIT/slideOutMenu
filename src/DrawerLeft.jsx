@@ -8,8 +8,9 @@ export default class DrawerLeft extends Component {
       <div>
         <Drawer open={this.props.open}>
           <MenuItem onTouchTap={this.props.close}>Close</MenuItem>
-          <MenuItem>Menu Item</MenuItem>
-          <MenuItem>Menu Item 2</MenuItem>
+          <MenuItem>New Request</MenuItem>
+          <MenuItem>Requests</MenuItem>
+          <MenuItem>Systems</MenuItem>
         </Drawer>
       </div>
     )

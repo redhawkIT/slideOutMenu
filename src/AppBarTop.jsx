@@ -21,7 +21,7 @@ class AppBarTop extends Component {
     return (
       <div>
         <AppBar
-          title="Title"
+          title="PCG Portal"
           onLeftIconButtonTouchTap={this.handleToggle}
 
           iconElementRight={
@@ -32,8 +32,8 @@ class AppBarTop extends Component {
               targetOrigin={{horizontal: 'right', vertical: 'top'}}
               anchorOrigin={{horizontal: 'right', vertical: 'top'}}
             >
-              <MenuItem primaryText="Refresh" />
-              <MenuItem primaryText="Help" />
+              <MenuItem primaryText="Profile" />
+              <MenuItem primaryText="System Health" />
               <MenuItem primaryText="Sign out" onClick={() => this.props.logout()}/>
             </IconMenu>
           }

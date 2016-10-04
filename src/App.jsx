@@ -3,6 +3,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBarTop from './AppBarTop'
 import Login from './Login'
 import SearchBarFuzzyFilter from './SearchBarFuzzyFilter'
+import TextScroll from './TextScroll'
+import Actions from './Actions'
 import './App.css'
 
 class App extends Component {
@@ -25,11 +27,14 @@ class App extends Component {
   }
 
   _render(isLogin) {
-    if(isLogin) {
+    if (isLogin) {
       return (
         <div>
           <AppBarTop logout={this.handleLogout}/>
+          <TextScroll/>
           <SearchBarFuzzyFilter/>
+          <br/>
+          <Actions/>
         </div>
       )
 
