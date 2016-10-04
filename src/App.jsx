@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBarTop from './AppBarTop'
 import Login from './Login'
+import SearchBarFuzzyFilter from './SearchBarFuzzyFilter'
 import './App.css'
 
 class App extends Component {
@@ -23,11 +24,25 @@ class App extends Component {
     this.setState({isLogin: false})
   }
 
+  _render(isLogin) {
+    if(isLogin) {
+      return (
+        <div>
+          <AppBarTop logout={this.handleLogout}/>
+          <SearchBarFuzzyFilter/>
+        </div>
+      )
+
+    } else {
+      return <Login login={this.handleLogin}/>
+    }
+  }
+
   render() {
     return (
       <MuiThemeProvider>
         <div>
-          {!this.state.isLogin ? <Login login={this.handleLogin}/> : <AppBarTop logout={this.handleLogout}/>}
+          {this._render(this.state.isLogin)}
         </div>
       </MuiThemeProvider>
     )
